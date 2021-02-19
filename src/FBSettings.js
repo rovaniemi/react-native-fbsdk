@@ -56,17 +56,10 @@ module.exports = {
    * Set auto log app events
    */
   setAutoLogAppEventsEnabled(): Promise<boolean> {
-    console.log('AutoLogAppEventsEnabled enabled');
     return Settings.setAutoLogAppEventsEnabled();
   },
 
   initializeSDK(): Promise<boolean> {
-    console.log('Facebook SDK initialized');
     return Settings.initializeSDK();
-  },
-
-  setDebugOn(): Promise<boolean> {
-    console.log('Facebook SDK debug on');
-    return Settings.setDebugOn();
   },
 };

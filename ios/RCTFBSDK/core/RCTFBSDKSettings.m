@@ -48,11 +48,6 @@ RCT_EXPORT_METHOD(setAutoLogAppEventsEnabled)
   [FBSDKSettings setAutoLogAppEventsEnabled:YES];
 }
 
-RCT_EXPORT_METHOD(setDebugOn)
-{
-  [FBSDKSettings enableLoggingBehavior:FBSDKLoggingBehaviorAppEvents];
-}
-
 RCT_EXPORT_METHOD(initializeSDK)
 {
   [FBSDKApplicationDelegate initializeSDK:nil];
