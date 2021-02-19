@@ -50,7 +50,6 @@ RCT_EXPORT_METHOD(setAutoLogAppEventsEnabled)
 
 RCT_EXPORT_METHOD(initializeSDK)
 {
-  [FBSDKSettings setAutoInitEnabled: YES ];
   [FBSDKApplicationDelegate initializeSDK:nil];
 }
 
