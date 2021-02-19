@@ -43,13 +43,14 @@ RCT_EXPORT_METHOD(setDataProcessingOptions:(nullable NSStringArray *)options cou
   [FBSDKSettings setDataProcessingOptions:options country:country state:state];
 }
 
-RCT_EXPORT_METHOD(setAutoLogAppEventsEnabled:(BOOL)ALE)
+RCT_EXPORT_METHOD(setAutoLogAppEventsEnabled)
 {
-  [FBSDKSettings setAutoLogAppEventsEnabled:ALE];
+  [FBSDKSettings setAutoLogAppEventsEnabled:YES];
 }
 
 RCT_EXPORT_METHOD(initializeSDK)
 {
+  [FBSDKSettings setAutoInitEnabled: YES ];
   [FBSDKApplicationDelegate initializeSDK:nil];
 }
 

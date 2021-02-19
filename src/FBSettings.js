@@ -55,11 +55,13 @@ module.exports = {
   /**
    * Set auto log app events
    */
-  setAutoLogAppEventsEnabled(ALE: boolean) {
-    Settings.setAutoLogAppEventsEnabled(ALE);
+  setAutoLogAppEventsEnabled() {
+    console.log('AutoLogAppEventsEnabled enabled');
+    Settings.setAutoLogAppEventsEnabled();
   },
 
   initializeSDK() {
+    console.log('Facebook SDK initialized');
     Settings.initializeSDK();
   },
 };

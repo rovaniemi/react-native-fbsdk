@@ -55,12 +55,13 @@ public class FBSettingsModule extends BaseJavaModule {
      * @param enabled flag setting
      */
     @ReactMethod
-    public static void setAutoLogAppEventsEnabled(boolean enabled) {
-        FacebookSdk.setAutoLogAppEventsEnabled(enabled);
+    public static void setAutoLogAppEventsEnabled() {
+        FacebookSdk.setAutoLogAppEventsEnabled();
     }
 
     @ReactMethod
     public static void initializeSDK() {
+        FacebookSdk.setAutoInitEnabled(true);
         FacebookSdk.fullyInitialize();
     }
 }
