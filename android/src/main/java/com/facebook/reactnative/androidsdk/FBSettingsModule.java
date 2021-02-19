@@ -60,6 +60,12 @@ public class FBSettingsModule extends BaseJavaModule {
     }
 
     @ReactMethod
+    public static void setDebugOn() {
+        FacebookSdk.setIsDebugEnabled(true);
+        FacebookSdk.addLoggingBehavior(LoggingBehavior.APP_EVENTS);
+    }
+
+    @ReactMethod
     public static void initializeSDK() {
         FacebookSdk.setAutoInitEnabled(true);
         FacebookSdk.fullyInitialize();
