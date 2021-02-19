@@ -57,5 +57,9 @@ module.exports = {
    */
   setAutoLogAppEventsEnabled(ALE: boolean) {
     Settings.setAutoLogAppEventsEnabled(ALE);
-  }
+  },
+
+  initializeSDK() {
+    Settings.initializeSDK();
+  },
 };

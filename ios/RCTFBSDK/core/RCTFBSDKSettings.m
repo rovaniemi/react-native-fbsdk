@@ -48,4 +48,9 @@ RCT_EXPORT_METHOD(setAutoLogAppEventsEnabled:(BOOL)ALE)
   [FBSDKSettings setAutoLogAppEventsEnabled:ALE];
 }
 
+RCT_EXPORT_METHOD(initializeSDK)
+{
+  [FBSDKApplicationDelegate initializeSDK:nil];
+}
+
 @end

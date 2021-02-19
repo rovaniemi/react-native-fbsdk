@@ -58,4 +58,9 @@ public class FBSettingsModule extends BaseJavaModule {
     public static void setAutoLogAppEventsEnabled(boolean enabled) {
         FacebookSdk.setAutoLogAppEventsEnabled(enabled);
     }
+
+    @ReactMethod
+    public static void initializeSDK() {
+        FacebookSdk.fullyInitialize();
+    }
 }
