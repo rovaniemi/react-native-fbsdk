@@ -55,11 +55,15 @@ module.exports = {
   /**
    * Set auto log app events
    */
-  setAutoLogAppEventsEnabled(): Promise<boolean> {
-    return Settings.setAutoLogAppEventsEnabled();
+  setAutoLogAppEventsEnabled(enable: boolean): Promise<boolean> {
+    return Settings.setAutoLogAppEventsEnabled(enable);
   },
 
-  initializeSDK(): Promise<boolean> {
-    return Settings.initializeSDK();
+  initializeSDK(enable: boolean): Promise<boolean> {
+    if (enable) {
+      return Settings.initializeSDK();
+    } else {
+      return Promise.resolve(boolean);
+    }
   },
 };
