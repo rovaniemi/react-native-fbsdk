@@ -63,7 +63,7 @@ module.exports = {
     if (enable) {
       return Settings.initializeSDK();
     } else {
-      return Promise.resolve(boolean);
+      return Promise.resolve(enable);
     }
   },
 };
